@@ -1,0 +1,90 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+@mixin color-scheme($name) {
+    @media (prefers-color-scheme: #{$name}) {
+      @content;
+    }
+}
+
+.title-section {
+    color: rgb(200, 195, 188);
+    position: relative;
+    display: inline-block;
+}
+.title-section p {
+    position: relative;
+    display: inline-block;
+}
+.title-section p::before {
+    position: absolute;
+    top: 50%;
+    background-color: rgb(38, 42, 43);
+    content: " ";
+    height: 2px;
+    width: 80px;
+    margin: 0 10px;
+    display: inline-block;
+    right: 100%;
+}
+.title-section p::after {
+    position: absolute;
+    top: 50%;
+    background-color: rgb(38, 42, 43);
+    content: " ";
+    height: 2px;
+    width: 80px;
+    margin: 0 10px;
+    display: inline-block;
+    left: 100%;
+}
+
+.contact-details {
+    display: inline-block;
+    align-content: center;
+}
+.content {
+    color: rgb(178, 171, 161);
+}
+
+section {
+    padding-bottom: .5s;
+}
+
+.block {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.personal-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    padding-right: 100px;
+}
+
+.personal-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal {
+    display: flex;
+    flex-direction: row;
+    padding-top: 80px;
+}
+
+
+@include media-breakpoint-down(sm) {  // < 576px
+    .personal {
+        flex-direction: column;
+    }
+    .personal-intro {
+        padding-right: 0px;
+    }
+    .personal-title {
+        flex-direction: column;
+    }
+}

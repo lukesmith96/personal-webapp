@@ -1,0 +1,18 @@
+#root {
+    min-height:100%;
+}
+
+.root {
+    background-color: rgb(24, 26, 27);
+    color: rgb(232, 230, 227);
+    text-align: center;
+    min-height:100%;
+    position:relative;
+    display:flex; 
+    flex-direction:column; 
+}
+
+
+.footer{
+    margin-top:auto; 
+}

@@ -1,0 +1,93 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+.submit-button {
+    max-width: 150px;
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #08c;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.x-button {
+    max-width: 150px;
+    margin: 10px 0;
+    padding: 3px 10px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(66, 66, 66);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.add-button {
+    max-width: 150px;
+    margin: 10px 0;
+    padding: 3px 10px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(66, 66, 66);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.tennis-form{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.row-title{
+    text-align: right;
+    position: relative;
+    right: 10%;
+    padding-right: 20%;
+    padding-top: 20px;
+}
+
+.player-list-title {
+    padding-top: 20px;
+}
+
+.tennis-title {
+    padding-top: 80px;
+}
+@include media-breakpoint-down(xs) {  // < 576px
+    .row-title {
+        text-align: left;
+        padding-right: 0%;
+        right: 0%;
+    }
+    .player-list {
+        border-color: rgb(66, 66, 66);
+        border-radius: 5px;
+        border-style: ridge;
+    }
+    .player-list-title {
+        display: flex;
+        text-align: left;
+    }
+}

@@ -1,0 +1,14 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+.contact-item.list-group-item {
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(24, 26, 27);
+}
+.contact-item.list-group-item:hover {
+    background-color: rgb(178, 171, 161);
+    border-color: rgb(178, 171, 161);
+}
+
+.contact-group.list-group {
+    display: inline-flex;
+}
