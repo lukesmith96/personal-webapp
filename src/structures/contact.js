@@ -15,7 +15,7 @@ export const CONTACTS =
         {
             id: 2,
             img_src: "/assets/resume_icon.png",
-            href: "https://github.com/lukesmith96",
+            href: "https://personal-webapp-bucket.s3.us-west-2.amazonaws.com/Resume-LukeSmith.pdf",
             caption: "Resume",
         },
         {
