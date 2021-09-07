@@ -29,7 +29,7 @@ export function CreateTennis(props) {
             <Formik
                 initialValues={{ title: '', group_size: '2', capacity: '', weeks: '', player_list: [] }}
                 onSubmit={(values, { setSubmitting }) => {
-                    alert(JSON.stringify(values, null, 2));
+                    // alert(JSON.stringify(values, null, 2));
                     postData(values);
                     // console.log(id);
                     // props.history.push('/tennis/' + id);
