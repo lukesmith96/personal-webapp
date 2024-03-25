@@ -1,8 +1,22 @@
 import React from 'react';
 import { Media } from 'reactstrap';
+import { Container } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import '../styles/experiences.scss';
 import 'bootstrap';
 import "react-bootstrap"
+
+const Img = styled('img')({
+	margin: 'auto',
+	display: 'block',
+	maxWidth: '85%',
+	maxHeight: '85%',
+});
+  
 
 class Experience extends React.Component {
 	constructor(props){
@@ -11,66 +25,40 @@ class Experience extends React.Component {
 	}
 
 	render(){
-		const experience = this.props.experiences.map((experience) => {
-			let width = window.innerWidth;
-			if (width > 576) {
-				return(
-					<div key={experience.id} id="unit">
-						<Media>
-							<Media left className="img-container">
-								<div>
-									<Media object src={experience.img_src} className="experience-img" />
-								</div>
-							</Media>
-							<Media body className="body-container">
-								<Media heading>
-									<div class="company">{experience.company}</div>
-									<strong class="title">{experience.title}</strong>
-									<em class="date">{experience.start_date}</em>
-								</Media>
-								<strong>{experience.location}</strong>
-								<div className="display-linebreak">{experience.description}</div>
-							</Media>
-						</Media>
-					</div>
-				);
-			} else {
-				return(
-					<div key={experience.id} id="unit">
-						<Media>
-							<Media body className="body-container">
-								<div className="img-container">
-									<Media object src={experience.img_src} className="experience-img" />
-								</div>
-								<Media heading className="heading-container">
-									<h1 class="company">{experience.company}</h1>
-									<strong class="title">{experience.title}</strong>
-									<em class="date">{experience.start_date}</em>
-								</Media>
-								<strong>{experience.location}</strong>
-								<div className="display-linebreak">{experience.description}</div>
-							</Media>
-						</Media>
-					</div>
-				);
-			}
-		});
-		console.log('I was triggered during render')
-		return(
-			<div className="container experience-section">
-				<Media list>
-					{experience}
-				</Media>
-			</div>
+		return (
+			<Stack direction="column" spacing={2}>
+			{Array.from(this.props.experiences.map((experience, index) => (
+				<Grid container 
+					direction={{xs: 'column', sm: 'row'}} 
+					justifyContent='center' spacing={2} 
+					alignItems={{xs: 'center', sm: "flex-start"}}
+				>
+					<Grid item xs={4} md={4}>
+						<Img src={experience.img_src} xs={1} className="experience-img"/>
+					</Grid>
+					<Grid item xs={6} md={6} container>
+						<Grid item xs container direction="column" spacing={2} align="left">
+							<Grid item xs>
+								<Typography gutterBottom variant="h4" class="company">
+									{experience.company}
+								</Typography>
+								<Typography variant="h6" gutterBottom class="title">
+									<strong>{experience.title}</strong> {experience.start_date}
+								</Typography>
+								<Typography variant="h6" color="rgb(178, 171, 161)">
+									{experience.location}
+								</Typography>
+								<Typography variant="body2" fontSize="15px" color="rgb(178, 171, 161)" className="display-linebreak">
+									{experience.description}
+								</Typography>
+							</Grid>
+						</Grid>
+					</Grid>
+				</Grid>
+			)))}
+			</Stack>
 		);
 	}
 }
 
-// 'Keys' - It helps identify which items have changed, are added or removed.
-
-
 export default Experience;
-
-/*
-	<div key={experience.id} id="unit" className="col-12 mt-5>	
-*/

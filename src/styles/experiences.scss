@@ -12,6 +12,8 @@
 
 .experience-img {
     border-radius: 25px;
+	margin: 'auto';
+	display: 'block';
 }
 
 .img-container {
@@ -25,82 +27,14 @@
 .company {
     margin-bottom: 5px;
     color: rgb(92, 157, 214);
-    font-size: 24px;
 }
 .title {
     color: rgb(178, 233, 106);
-    font-size: 16px;
 }
 .date {
     font-style: italic;
     color: rgb(178, 233, 106);
-    font-size: 16px;
 }
 .heading-container {
     padding-top: 10px;
-}
-
-
-@include media-breakpoint-down(sm) {  // < 576px
-    .experience-img {
-        width: 302px;
-    }
-    .img-container {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .body-container {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .experience-section ul{
-        padding-left:0px;
-    }
-    .experience-section.container{
-        padding-left:0px;
-    }
-}
-@include media-breakpoint-up(sm) { // > 576px
-    .experience-img {
-        width: 187px;
-    }
-    .img-container {
-        padding-left: 41px;
-    }
-    .body-container {
-        padding-left: 14px;
-    }
-}
-@include media-breakpoint-up(md) { // > 768px
-    .experience-img {
-        width: 236px;
-    }
-    .img-container {
-        padding-left: 52px;
-    }
-    .body-container {
-        padding-left: 16.5px;
-    }
-}
-@include media-breakpoint-up(lg) { // > 992px 
-    .experience-img {
-        width: 269px;
-    }
-    .img-container {
-        padding-left: 59px;
-    }
-    .body-container {
-        padding-left: 19px;
-    }
-}
-@include media-breakpoint-up(xl) { // > 1200px 
-    .experience-img {
-        width: 302px;
-    }
-    .img-container {
-        padding-left: 66px;
-    }
-    .body-container {
-        padding-left: 19px;
-    }
 }

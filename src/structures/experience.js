@@ -6,7 +6,7 @@ export const EXPERIENCES =
             company: "AWS Security",
             title: "Software Engineer II, ",
             start_date: "Since September 2018",
-            location: "San Luis Obispo, CA",
+            location: "San Francisco, CA",
             description: `
                 Joining AWS Security out of college was a dream come true. After spending my college career focusing on cloud computing, participating in the white hat security club, attending Linux club event, and studying in computer networking.
                 \n
