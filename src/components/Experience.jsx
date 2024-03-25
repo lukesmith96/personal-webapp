@@ -1,10 +1,7 @@
 import React from 'react';
-import { Media } from 'reactstrap';
-import { Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import '../styles/experiences.scss';
 import 'bootstrap';
